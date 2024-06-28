@@ -9,9 +9,6 @@ const app=express()
 app.use(cors())
 app.use(express.json())
 connectDb()
-app.use('/',(req,res)=>{
-res.status(200).send('site is working')
-})
 app.use('/users',userRoutes)
 app.use('/colleges',collegeRoute)
 app.listen(process.env.port,()=>{
